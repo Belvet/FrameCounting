@@ -5,38 +5,109 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <title>Guilty Calculator</title>
+
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body>
+
+
   
-</body>
-</html>
+  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="" class="navbar-brand p-0">
+        <h1 class="m-0">GuiltyCalculator</h1>
+        <!-- <img src="img/logo.png" alt="Logo"> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto py-0">
+            <a href="#" class="nav-item nav-link active">Calulate</a>
+            <a href="#" class="nav-item nav-link active">How To Use</a>
+            <a href="#" class="nav-item nav-link active">Discord</a>
+            <a href="#" class="nav-item nav-link active">Patreon</a>
+
+
+
+        </div>
+        <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+    </div>
+</nav>
 
 
 
 
-<select id="dropdown1" onchange="updateDropdown3Options()">
-  <option value="">Choose an option</option>
-  <option value="sol">Sol Badguy</option>
-  <option value="ky">Ky Kiske</option>
-</select>
+  <select id="dropdown2">
+    <option value="">Choose an option</option>
+    <option value="sol">Sol Badguy</option>
+    <option value="ky">Ky Kiske</option>
+  </select>
 
-<select id="dropdown2">
-  <option value="">Choose an option</option>
-  <option value="sol">Sol Badguy</option>
-  <option value="ky">Ky Kiske</option>
-</select>
+  <select id="dropdown1" onchange="updateDropdownOptions()">
+    <option value="">Choose an option</option>
+    <option value="sol">Sol Badguy</option>
+    <option value="ky">Ky Kiske</option>
+  </select>
 
+  <select id="dropdown3">
+    <!-- Options will be dynamically updated -->
+  </select>
 
-<select id="dropdown3">
-  <!-- Options will be dynamically updated -->
-</select>
-
-
-
-<button onclick="getPossibleMoves1()">Submit</button>
-
-
+  <button onclick="displayPossibleMoves()">Submit</button>
 <br>
 
 <h2 id="result"></h2>
+
+<br>
+
+<section>
+
+<div style="align-self: center;" id="youList">
+  <h2>TU PERSONAJE</h2>
+  <img src="/img/Sol_Badguy_Icon.png" onclick="youImage('sol')" style="cursor: pointer;">
+  <img src="/img/Ky_Kiske_Icon.png" onclick="youImage('ky')" style="cursor: pointer;">
+</div>
+
+
+
+<div id="enemyList">
+  <h2>EL DEL OTRO</h2>
+  <img src="/img/Sol_Badguy_Icon.png" onclick="enemyImage('sol')" style="cursor: pointer;">
+  <img src="/img/Ky_Kiske_Icon.png" onclick="enemyImage('ky')" style="cursor: pointer;">
+</div>
+
+</section>
+
+
+
+
+
+</body>
+</html>
+      
